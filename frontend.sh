@@ -1,4 +1,5 @@
 code_dir=$(pwd)
+
 echo -e "\e[35mInstalling nginx\e[0m"
 yum install nginx -y
 
@@ -21,5 +22,5 @@ systemctl enable nginx
 echo -e "\e[35mStarting Nginx service\e[0m"
 systemctl restart nginx
 
-# Roboshop Config is not copied - It is done in the config file adding the DNS records from route 53
+# Roboshop Config is not copied - It is done
 # If any command is failed in middle, we need to stop the script(by default it will proceed to the next command)
