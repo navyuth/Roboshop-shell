@@ -17,7 +17,7 @@ cp configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
 echo -e "\e[35mEnabling nginx service\e[0m"
 systemctl enable nginx
 
-echo -e "\e[35mStarting Nginx service\]e[0m"
+echo -e "\e[35mStarting Nginx service\e[0m"
 systemctl restart nginx
 
 # Roboshop Config is not copied - It is done in the config file adding the DNS records from route 53
