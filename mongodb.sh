@@ -13,6 +13,6 @@ print_head "Enable MongoDB service"
 systemctl enable mongod &>>${log_file}
 
 print_head "Start MongoDB service"
-systemctl start mongod &>>${log_file}
+systemctl restart mongod &>>${log_file}
 
 # update /etc/mongod.conf file 127.0.0.1 with 0.0.0.0
