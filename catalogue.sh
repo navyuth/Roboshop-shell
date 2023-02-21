@@ -2,22 +2,28 @@ source common.sh
 
 print_head "Configure NodeJs Repo"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
+status_check $?
 
 print_head "Install NodeJs"
 yum install nodejs -y &>>${log_file}
+status_check $?
 
 print_head "Creating Roboshop user"
 useradd roboshop &>>${log_file}
+status_check $?
 
 print_head "Create application directory"
 mkdir /app &>>${log_file}
+status_check $?
 
 print_head "Delete old content"
 rm -rf /app/* &>>${log_file}
+status_check $?
 
 print_head "Downloading App Content"
 curl -L -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>${log_file}
 cd /app
+status_check $?
 
 print_head "Extracting App content"
 unzip /tmp/catalogue.zip &>>${log_file}
