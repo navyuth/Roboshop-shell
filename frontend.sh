@@ -1,7 +1,7 @@
 source common.sh
 
 print_head "Installing Nginx"
-yum install nginx -y &>>${log_file}
+yum install nginxx -y &>>${log_file}
 status_check $?
 
 print_head "Removing the old content"
@@ -22,7 +22,7 @@ cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>
 status_check $?
 
 print_head "Enabling Nginx service"
-systemctll enable nginx &>>${log_file}
+systemctl enable nginx &>>${log_file}
 status_check $?
 
 print_head "Starting Nginx service"
