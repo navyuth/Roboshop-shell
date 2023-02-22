@@ -26,9 +26,8 @@ print_head "Start MySQL Service"
 systemctl start mysqld &>>${log_file}
 status_check $?
 
-print_head "Ser Root Password"
+print_head "Set Root Password"
 mysql_secure_installation --set-root-pass ${mysql_root_password} &>>${log_file}
 status_check $?
 
-mysql -uroot -pRoboShop@1
 
