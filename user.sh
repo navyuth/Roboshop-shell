@@ -1,5 +1,5 @@
 source common.sh
 
 component=user
-NodeJs
-
+schema_type="mongo"
+nodejs
