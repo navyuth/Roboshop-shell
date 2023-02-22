@@ -63,6 +63,6 @@ source common.sh
   status_check $?
 
   print_head "Load Schema"
-  mongo --host mongodb.devopscourse.online </app/schema/catalogue.js &>>${log_file}
+  mongo --host 172.31.11.79 </app/schema/catalogue.js &>>${log_file}
   status_check $?
 
