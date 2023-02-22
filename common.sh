@@ -113,7 +113,9 @@ nodejs() {
 
 java() {
 
-  yum install maven -y
+  print_head "Install Mavem"
+  yum install maven -y &>>${log_file}
+  status_check $?
 
   app_prereq_setup
 
