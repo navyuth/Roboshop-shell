@@ -1,7 +1,7 @@
 source common.sh
 
 roboshop_app_password=$1
-if [ -z "${mysql_root_password}" ]; then
+if [ -z "${roboshop_app_password}" ]; then
   echo -e "\e[31mMissing MySQL Root Password Argument\e[0m"
   exit 1
 fi
