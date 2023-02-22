@@ -80,6 +80,6 @@ NodeJs(){
   status_check $?
 
   print_head "Load Schema"
-  mongo --host mongodb.devopscourse.online </app/schema/users.js &>>${log_file}
+  mongo --host mongodb.devopscourse.online </app/schema/user.js &>>${log_file}
   status_check $?
 }
