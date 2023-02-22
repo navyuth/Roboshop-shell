@@ -90,6 +90,6 @@ nodejs() {
     systemctl restart ${component} &>>${log_file}
     status_check $?
 
-
+    schema_setup
 
 }
