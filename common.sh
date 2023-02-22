@@ -44,7 +44,7 @@ app_prereq_setup() {
       unzip /tmp/${component}.zip &>>${log_file}
       status_check $?
 }
-systemd.setup() {
+systemd_setup() {
 
       print_head "Copying SystemD service file"
       cp ${code_dir}/configs/${component}.service /etc/systemd/system/${component}.service &>>${log_file}
