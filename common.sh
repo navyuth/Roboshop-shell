@@ -68,7 +68,7 @@ NodeJs(){
   status_check $?
 
   print_head "Start ${component} Service"
-  systemctl start ${component} &>>${log_file}
+  systemctl restart ${component} &>>${log_file}
   status_check $?
 
   print_head "Copy MongoDB Repo File"
