@@ -110,7 +110,7 @@ nodejs() {
     status_check $?
 
     schema_setup
-    systemd+setup
+    systemd_setup
 }
 
 java() {
