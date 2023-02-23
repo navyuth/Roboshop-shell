@@ -7,7 +7,7 @@ print_head(){
 }
 
 status_check() {
-  if [ "$1" -eq 0 ]; then
+  if [ $1 -eq 0 ]; then
     echo SUCCESS
   else
     echo FAILURE
@@ -156,17 +156,15 @@ python() {
 golang() {
   print_head "Install Golang"
   yum install golang -y &>>${log_file}
-  status_check &?
+  status_check $?
 
   app_prereq_setup
 
   print_head "Download Dependencies"
+  # shellcheck disable=SC2129
   go mod init dispatch &>>${log_file}
-  status_check $?
 
   go get &>>${log_file}
-  status_check $?
-
   go build &>>${log_file}
   status_check $?
 
