@@ -161,7 +161,6 @@ golang() {
   app_prereq_setup
 
   print_head "Download Dependencies"
-  # shellcheck disable=SC2129
   go mod init dispatch &>>${log_file}
 
   go get &>>${log_file}
